@@ -1,0 +1,130 @@
+body {
+  background: #121212;
+  font-family: 'Arial Black', Arial, sans-serif;
+  color: #f2f2f2;
+}
+
+.todo-container {
+  background: linear-gradient(135deg, #e63946, #1d3557);
+  border-radius: 15px;
+  width: 360px;
+  margin: 50px auto;
+  padding: 30px 20px;
+  box-shadow: 0 8px 15px rgba(230, 57, 70, 0.6);
+  text-align: center;
+  border: 3px solid #f1faee;
+}
+
+.todo-container h1 {
+  font-size: 2.5rem;
+  letter-spacing: 3px;
+  margin-bottom: 20px;
+  text-transform: uppercase;
+  text-shadow: 2px 2px #000;
+}
+
+form {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+}
+
+input[type="text"] {
+  flex-grow: 1;
+  padding: 10px 15px;
+  font-weight: bold;
+  border-radius: 50px;
+  border: none;
+  outline: none;
+  font-size: 1.1rem;
+  box-shadow: inset 2px 2px 8px rgba(0,0,0,0.4);
+  transition: all 0.3s ease;
+}
+
+input[type="text"]:focus {
+  box-shadow: inset 2px 2px 10px rgba(255, 255, 255, 0.7);
+  background: #f1faee;
+  color: #1d3557;
+}
+
+button {
+  background: #f1faee;
+  color: #e63946;
+  font-weight: bold;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 50px;
+  cursor: pointer;
+  transition: background 0.3s ease;
+  box-shadow: 0 5px 10px rgba(230, 57, 70, 0.7);
+  font-size: 1.1rem;
+  user-select: none;
+}
+
+button:hover {
+  background: #e63946;
+  color: #f1faee;
+  box-shadow: 0 7px 15px rgba(230, 57, 70, 0.9);
+}
+
+ul {
+  list-style: none;
+  margin-top: 30px;
+  padding: 0;
+}
+
+li {
+  background: rgba(241, 250, 238, 0.2);
+  margin: 12px 0;
+  padding: 12px 15px;
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  box-shadow: 0 3px 8px rgba(0,0,0,0.4);
+  transition: background 0.3s ease;
+}
+
+li:hover {
+  background: rgba(241, 250, 238, 0.35);
+}
+
+.completed {
+  text-decoration: line-through;
+  color: #a8dadc;
+}
+
+input[type="checkbox"] {
+  width: 22px;
+  height: 22px;
+  cursor: pointer;
+  accent-color: #e63946;
+  margin-right: 15px;
+  flex-shrink: 0;
+}
+
+li span {
+  flex-grow: 1;
+  font-weight: bold;
+  font-size: 1.15rem;
+  user-select: none;
+}
+
+li button {
+  background: transparent;
+  border: none;
+  color: #f1faee;
+  font-weight: bold;
+  cursor: pointer;
+  padding: 6px 12px;
+  font-size: 1rem;
+  border-radius: 12px;
+  transition: background 0.3s ease;
+  box-shadow: inset 0 0 5px rgba(230, 57, 70, 0.6);
+}
+
+li button:hover {
+  background: #e63946;
+  box-shadow: 0 0 10px rgba(230, 57, 70, 0.9);
+  color: #fff;
+}
