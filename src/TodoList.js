@@ -1,9 +1,10 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import './TodoList.css';
 
 function TodoList() {
   const [todos, setTodos] = useState([]);
   const [newTodo, setNewTodo] = useState('');
+  const [darkMode, setDarkMode] = useState(false);
 
   const addTodo = (e) => {
     e.preventDefault();
@@ -23,9 +24,23 @@ function TodoList() {
     setTodos(updatedTodos);
   };
 
+  const toggleTheme = () => {
+    setDarkMode(!darkMode);
+  };
+
+  // Apply theme class to body
+  useEffect(() => {
+    document.body.className = darkMode ? 'dark' : 'light';
+  }, [darkMode]);
+
   return (
-    <div className="todo-container">
-      <h1>Todo List</h1>
+    <div className={`todo-container ${darkMode ? 'dark' : 'light'}`}>
+      <div className="header">
+        <h1>Todo List</h1>
+        <button className="theme-toggle" onClick={toggleTheme}>
+          {darkMode ? '🌞 Light Mode' : '🌙 Dark Mode'}
+        </button>
+      </div>
       <form onSubmit={addTodo}>
         <input
           type="text"
